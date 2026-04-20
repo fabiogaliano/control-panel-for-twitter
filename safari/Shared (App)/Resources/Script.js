@@ -2,9 +2,9 @@ function show(platform, enabled, useSettingsInsteadOfPreferences) {
   document.body.classList.add(`platform-${platform}`)
 
   if (useSettingsInsteadOfPreferences) {
-    document.querySelector('.platform-mac.state-on').innerText = 'Control Panel for Twitter’s extension is currently on. You can turn it off in the Extensions section of Safari Settings.'
-    document.querySelector('.platform-mac.state-off').innerText = 'Control Panel for Twitter’s extension is currently off. You can turn it on in the Extensions section of Safari Settings.'
-    document.querySelector('.platform-mac.state-unknown').innerText = 'You can turn on Control Panel for Twitter’s extension in the Extensions section of Safari Settings.'
+    document.querySelector('.platform-mac.state-on').innerText = 'Birdfeed\u2019s extension is currently on. You can turn it off in the Extensions section of Safari Settings.'
+    document.querySelector('.platform-mac.state-off').innerText = 'Birdfeed\u2019s extension is currently off. You can turn it on in the Extensions section of Safari Settings.'
+    document.querySelector('.platform-mac.state-unknown').innerText = 'You can turn on Birdfeed\u2019s extension in the Extensions section of Safari Settings.'
     document.querySelector('.open-preferences').innerText = 'Quit and Open Safari Settings…'
   }
 

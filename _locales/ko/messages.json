@@ -72,16 +72,16 @@
     "message": "버그 보고서를 위한 설정 내보내기"
   },
   "extensionDescription": {
-    "message": "트위터에 대한 더 많은 제어권을 제공하고 기능을 보완하며 UI를 개선합니다"
+    "message": "Birdfeed는 Twitter/X 경험을 완전히 제어할 수 있게 해줍니다. 보고 싶은 것을 맞춤 설정하고 노이즈 없는 깨끗하고 조용한 피드를 즐기세요."
   },
   "extensionDescriptionShort": {
-    "message": "트위터에 대한 더 많은 제어권을 제공하고 기능을 보완하며 UI를 개선합니다"
+    "message": "Birdfeed로 Twitter/X를 제어하세요. 원하는 것을 맞춤 설정하여 깨끗하고 조용한 피드를."
   },
   "extensionName": {
-    "message": "Control Panel for Twitter"
+    "message": "Birdfeed"
   },
   "extensionNameDisabled": {
-    "message": "Control Panel for Twitter (비활성화됨)"
+    "message": "Birdfeed (비활성화됨)"
   },
   "fastBlockLabel": {
     "message": "빠른 차단 (확인 대화상자 생략)"

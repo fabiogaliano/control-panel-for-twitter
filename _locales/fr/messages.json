@@ -72,16 +72,16 @@
     "message": "Exporter la configuration pour un rapport de bug"
   },
   "extensionDescription": {
-    "message": "Vous donne plus de contrôle sur Twitter et ajoute des fonctionnalités manquantes et des améliorations de l'interface utilisateur"
+    "message": "Birdfeed vous donne le contrôle sur votre expérience Twitter/X. Personnalisez ce que vous voyez et profitez d'un fil propre et calme sans le bruit."
   },
   "extensionDescriptionShort": {
-    "message": "Donne plus de contrôle sur Twitter, ajoute des fonctionnalités manquantes, améliore l'interface utilisateur"
+    "message": "Birdfeed vous donne le contrôle sur Twitter/X. Personnalisez ce que vous voyez pour un fil propre et calme."
   },
   "extensionName": {
-    "message": "Control Panel for Twitter"
+    "message": "Birdfeed"
   },
   "extensionNameDisabled": {
-    "message": "Control Panel for Twitter (désactivé)"
+    "message": "Birdfeed (désactivé)"
   },
   "fastBlockLabel": {
     "message": "Blocage rapide (ignore la boîte de dialogue de confirmation)"

@@ -72,16 +72,16 @@
     "message": "バグレポートの設定をエクスポート"
   },
   "extensionDescription": {
-    "message": "Twitter をより細かく制御し、不足している機能を追加して UI を改善します"
+    "message": "BirdfeedはあなたのTwitter/X体験を完全にコントロールできます。表示内容をカスタマイズして、ノイズのないクリーンで静かなフィードをお楽しみください。"
   },
   "extensionDescriptionShort": {
-    "message": "Twitter をより細かく制御し、不足している機能を追加して UI を改善します"
+    "message": "BirdfeedでTwitter/Xをコントロール。表示内容をカスタマイズして、クリーンで静かなフィードを。"
   },
   "extensionName": {
-    "message": "Control Panel for Twitter"
+    "message": "Birdfeed"
   },
   "extensionNameDisabled": {
-    "message": "Control Panel for Twitter (無効)"
+    "message": "Birdfeed (無効)"
   },
   "fastBlockLabel": {
     "message": "即ブロック（確認画面をスキップする）"

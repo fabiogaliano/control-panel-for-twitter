@@ -5,7 +5,7 @@ const semver = require('semver')
 const manifestPaths = ['./manifest.mv2.json', './manifest.mv3.json', './Safari/Shared (Extension)/Resources/manifest.json']
 const optionsJsPath = './options.js'
 const optionsHtmlPath = './options.html'
-const safariProjectPath = './Safari/Control Panel for Twitter.xcodeproj/project.pbxproj'
+const safariProjectPath = './Safari/Birdfeed.xcodeproj/project.pbxproj'
 
 let releaseType = process.argv[2]
 
@@ -32,7 +32,7 @@ for (let manifestPath of manifestPaths) {
 fs.writeFileSync(
   optionsJsPath,
   fs.readFileSync(optionsJsPath, {encoding: 'utf8'})
-    .replace(/control-panel-for-twitter-.+\.config\.txt/, `control-panel-for-twitter-v${nextVersion}.config.txt`),
+    .replace(/birdfeed-.+\.config\.txt/, `birdfeed-v${nextVersion}.config.txt`),
   {encoding: 'utf8'}
 )
 
