@@ -93,6 +93,7 @@ export type Config = {
   twitterBlueChecks: 'ignore' | 'replace' | 'hide'
   unblurSensitiveContent: boolean
   uninvertFollowButtons: boolean
+  unwrapTcoLinks: boolean
   // Experiments
   customCss: string
   // Desktop only

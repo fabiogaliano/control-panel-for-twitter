@@ -205,6 +205,7 @@ const config = {
   twitterBlueChecks: 'replace',
   unblurSensitiveContent: false,
   uninvertFollowButtons: true,
+  unwrapTcoLinks: false,
   // Experiments
   customCss: '',
   // Desktop only
@@ -6270,6 +6271,10 @@ function onTimelineChange($timeline, page, options = {}) {
       if (!hideItem && config.restoreLinkHeadlines) {
         restoreLinkHeadline($tweet)
       }
+
+      if (!hideItem) {
+        unwrapTcoLinks($tweet)
+      }
     }
     else if (isOnNotificationsTimeline) {
       /** @type {?import("./types").NotificationType} */
@@ -6503,6 +6508,10 @@ function onIndividualTweetTimelineChange($timeline, options) {
 
       if (!hideItem && config.restoreLinkHeadlines) {
         restoreLinkHeadline($tweet)
+      }
+
+      if (!hideItem) {
+        unwrapTcoLinks($tweet)
       }
     }
     else {
@@ -6968,6 +6977,38 @@ function restoreLinkHeadline($tweet) {
       <div style="color: var(--cpft-text-primary)">${headline}</div>
     </div>`)
     $link.dataset.headlineRestored = 'true'
+  }
+}
+
+/**
+ * @param {HTMLElement} $tweet
+ */
+function unwrapTcoLinks($tweet) {
+  if (!config.unwrapTcoLinks) return
+
+  let $links = /** @type {NodeListOf<HTMLAnchorElement>} */ ($tweet.querySelectorAll('a[href^="https://t.co/"]'))
+  for (let $link of $links) {
+    if ($link.dataset.tcoUnwrapped) continue
+
+    let expandedUrl = $link.dataset.expandedUrl
+
+    if (!expandedUrl) {
+      let text = $link.textContent?.trim()
+      if (text && !text.endsWith('…')) {
+        if (text.startsWith('http://') || text.startsWith('https://')) {
+          expandedUrl = text
+        } else if (text.includes('.') && !text.includes(' ')) {
+          expandedUrl = 'https://' + text
+        }
+      }
+    }
+
+    if (expandedUrl) {
+      $link.href = expandedUrl
+      $link.dataset.tcoUnwrapped = 'true'
+    } else {
+      $link.dataset.tcoUnwrapped = 'attempted'
+    }
   }
 }
 

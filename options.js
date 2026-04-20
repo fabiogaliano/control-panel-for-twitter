@@ -156,6 +156,8 @@ for (let translationId of [
   'uiTweaksOptionsLabel',
   'unblurSensitiveContentLabel',
   'uninvertFollowButtonsLabel',
+  'unwrapTcoLinksLabel',
+  'unwrapTcoLinksInfo',
   'xFixesLabel',
 ]) {
   let $el = document.getElementById(translationId)
@@ -271,6 +273,7 @@ const defaultConfig = {
   redirectChatNav: false,
   redirectToTwitter: false,
   reducedInteractionMode: false,
+  unwrapTcoLinks: false,
   replaceLogo: true,
   restoreLinkHeadlines: true,
   restoreOtherInteractionLinks: true,
