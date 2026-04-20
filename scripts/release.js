@@ -1,4 +1,5 @@
 const fs = require('fs')
+const {execSync} = require('child_process')
 
 const semver = require('semver')
 
@@ -52,3 +53,18 @@ fs.writeFileSync(
 )
 
 console.log(`Bumped to v${nextVersion}`)
+
+const filesToCommit = [
+  ...manifestPaths,
+  optionsJsPath,
+  optionsHtmlPath,
+  safariProjectPath,
+].join(' ')
+
+execSync(`git add ${filesToCommit}`, {stdio: 'inherit'})
+execSync(`git commit -m "Release v${nextVersion}"`, {stdio: 'inherit'})
+execSync(`git tag v${nextVersion}`, {stdio: 'inherit'})
+execSync('git push', {stdio: 'inherit'})
+execSync(`git push origin v${nextVersion}`, {stdio: 'inherit'})
+
+console.log(`\nTagged and pushed v${nextVersion} — GitHub Actions will build the release.`)
